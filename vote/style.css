@@ -1,0 +1,54 @@
+/*@font-face {
+  font-family: 'Patua One', cursive;
+  src: url(fonts/Patua_One/PatuaOne-Regular.ttl); 
+}*/
+
+
+
+body{
+	font-family: 'Helvetica', sans-serif;
+}
+
+
+.container{
+	
+	margin-left: 50%;
+	width:50%;
+	padding: 0px;
+	padding-top: 150px;
+	
+}
+.container span{
+font-weight: bold;
+font-family: 'Helvetica', sans-serif;
+
+}
+.btn{
+	background-image: linear-gradient(to right,orange,#ADD8E6,green);
+	color: white;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size:20px;
+	margin-left:17%;
+	
+}
+.ml2 {
+ font-family: 'Helvetica', sans-serif;
+  font-weight: 900;
+  font-size: 3.5em;
+  color:#191970;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.large{
+	 font-size: 8.0em;
+}
+.small{
+	 font-size: 2.0em;
+	 margin-left:15%;
+}
+
+

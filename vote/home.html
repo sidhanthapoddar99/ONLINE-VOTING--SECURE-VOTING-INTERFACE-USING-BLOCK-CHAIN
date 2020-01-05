@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elections-2k19</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<style>
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <style type="text/css">
+/*@font-face {
+  font-family: 'Patua One', cursive;
+  src: url(fonts/Patua_One/PatuaOne-Regular.ttl); 
+}*/
+
+
+
+
+body{
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("./images/taj.jpg")  no-repeat ;
+	background-size: cover;
+	font-family: 'Helvetica', sans-serif;
+	
+	
+
+	
+}
+.innerbox
+{
+ background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("./images/india.png")  no-repeat left;
+  
+  height: 100vh;
+	
+	
+}
+
+
+.container {
+font-weight: bold;
+font-family: 'Helvetica', sans-serif;
+
+}
+.btn{
+	background-image: linear-gradient(to right,orange,#ADD8E6,green);
+	color: white;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size:20px;
+	margin-left:17%;
+	
+}
+.ml2 {
+ font-family: 'Helvetica', sans-serif;
+  font-weight: 900;
+  font-size: 3.5em;
+  color:#191970;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.large{
+	 font-size: 8.0em;
+}
+.small{
+	 font-size: 2.0em;
+	 margin-left:15%;
+}
+
+
+
+    .btn{
+  background-image: linear-gradient(to right,orange,#ADD8E6,green);
+  color: white;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size:20px;
+  margin-left:17%;
+  
+}
+  </style>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+    $('.ml2').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function(el, i) {
+      return 70*i;
+    }
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 3000
+  });
+});
+	</script>
+</head>
+<body>
+<div class="innerbox">	
+<div class="container">
+ 
+	<h1 class="ml2 large text">WELCOME</h1>
+	<p class="ml2 small ">ELECTIONS 2k19</p>
+
+
+  <button onclick="location.href = 'login/login.html';" id="myButton" class="float-left submit-button btn" >VOTE NOW</button> 
+	</div>
+</div>
+</body>
+</html>

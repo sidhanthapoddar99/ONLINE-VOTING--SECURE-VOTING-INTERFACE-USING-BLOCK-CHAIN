@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <div class="media-body">
+          <h2 class="account-heading">Generated</h2>
+          <p class="text-secondary"><b>User Login         :: </b>{{ current_user.email }}</p>
+          <p class="text-secondary"><b>Temporary Vote code:: </b>{{ code }}</p>
+        </div>
+      </div>
+    </div>
+{% endblock content %}

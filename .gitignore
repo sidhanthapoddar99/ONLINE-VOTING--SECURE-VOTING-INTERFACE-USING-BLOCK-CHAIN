@@ -43,4 +43,11 @@ build/
 *.swo
 *.zip
 
-flaskblog/
+# flask portal: source is tracked, everything the app generates is not
+vote-blog-flask/flaskblog/site.db
+vote-blog-flask/flaskblog/site - Copy.db
+vote-blog-flask/flaskblog/static/face/training.yml
+vote-blog-flask/flaskblog/static/face/UserFaces/
+vote-blog-flask/flaskblog/static/face/pickle/
+vote-blog-flask/flaskblog/static/profile_pics/*
+!vote-blog-flask/flaskblog/static/profile_pics/default.jpg

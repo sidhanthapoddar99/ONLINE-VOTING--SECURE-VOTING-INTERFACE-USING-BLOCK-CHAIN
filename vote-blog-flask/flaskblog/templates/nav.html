@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elections-2k19</title>
+  
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+   
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='card.css') }}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <style type="text/css">
+/*@font-face {
+  font-family: 'Patua One', cursive;
+  src: url(fonts/Patua_One/PatuaOne-Regular.ttl); 
+}*/
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+
+
+body{
+    background:linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+           linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+           linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+           linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+           linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+           linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url({{ url_for('static', filename='./images/taj.jpg') }})  no-repeat ;
+    background-size: cover;
+    font-family: 'Helvetica', sans-serif;
+    overflow:hidden;
+    
+}
+.innerbox
+{
+ background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url({{ url_for('static', filename='./images/india.png') }})  no-repeat left;
+  
+  height: 100vh;
+    
+    
+}
+
+
+.container {
+font-weight: bold;
+font-family: 'Helvetica', sans-serif;
+
+}
+.btn{
+    background-image: linear-gradient(to right,orange,#ADD8E6,green);
+    color: white;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size:20px;
+    margin-left:17%;
+    
+}
+.ml2 {
+ font-family: 'Helvetica', sans-serif;
+  font-weight: 900;
+  font-size: 3.5em;
+  color:#191970;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.large{
+     font-size: 8.0em;
+}
+.small{
+     font-size: 2.0em;
+     margin-left:15%;
+}
+
+
+
+    .btn{
+  background-image: linear-gradient(to right,orange,#ADD8E6,green);
+  color: white;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size:20px;
+  margin-left:17%;
+  
+}
+  </style>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+    $('.ml2').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function(el, i) {
+      return 70*i;
+    }
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 3000
+  });
+});
+    </script>
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}    
+<div class="innerbox">  
+<div class="container" style="position:relative;top:40px;left:400px;">
+ 
+    <h1 class="ml2 large text">WELCOME</h1>
+    <p class="ml2 small ">ELECTIONS 2k19</p>
+
+
+  <button  id="myButton" class="float-left submit-button btn" ><a href="file:///C:/Users/sidha/Desktop/final%20iwp%20project%20components/tamilnadu/src/index.htm">VOTE NOW</a></button> 
+    </div>
+</div>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+html{
+  background:no-repeat center fixed;
+  background-size: cover;
+
+}
+
+.entirepage .formtotal .formpage{
+  position:relative;
+  top:250px;
+  height:280px;
+  width: 200px;
+  border:2px solid crimson;
+  border-radius: 50px;
+}
+
+p,h3{
+  color:crimson;
+}
+input[type=text]{
+  height: 20px;
+  width: 150px;
+  border: 3px crimson;
+
+}
+button[type=Submit]{
+  background-color:#FF6D6D;
+  border: 3px crimson;
+  padding:10px;
+  color:white;
+    }
+input[type=password]{
+  height:20px;
+  width: 150px;
+  border: 3px crimson;
+}
+.last{
+  color:crimson;
+  position: relative;
+  top:280px;
+  }
+
+
+

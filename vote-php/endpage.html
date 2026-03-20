@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elections-2k19</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styleend.css">
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
+	<style type="text/css">
+	body{
+	
+	background-image: url(img/india.jpg);
+	background-repeat: no-repeat;
+	object-fit: contain;
+	
+}
+.container{
+	position: relative;
+	margin-left: 30%;
+	margin-top: 10%;
+}
+.container span{
+
+font-family:'Helvetica';
+font-size:80px;
+font-weight: bold;
+color:#191970;
+}
+.btn{
+	background-image: linear-gradient(to right,orange,#ADD8E6,green);
+	border: 0px solid;
+	border-image:linear-gradient(to right, orange 40%, blue 25%, green 40%) 3;
+	color: white;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size:20px;
+	margin-left:2%;
+}
+		.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.7em;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$('.container .ml7 .letters').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: function(el, i) {
+      return 50 * i;
+    }
+  }).add({
+    targets: '.ml7',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 3000
+  });
+  });
+	</script>
+</head>
+<body>
+<div class="container">
+	<h1 class="ml7">
+  <span class="text-wrapper">
+    <span class="letters">THANK YOU</span><br>
+    <span class="letters">FOR VOTING!!!</span>
+    <button onclick="location.href = 'http://localhost/vote/home.html';" id="myButton" class="float-left submit-button btn" >HOME</button> </div>
+  </span>
+</h1>
+</body>
+</html>
